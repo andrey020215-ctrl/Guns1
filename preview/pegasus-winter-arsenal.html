@@ -1,0 +1,370 @@
+<div id="pegasus-winter-arsenal" lang="ru">
+  <style>
+    #pegasus-winter-arsenal { color: var(--foreground); }
+    #pegasus-winter-arsenal .pf-heading { display: flex; align-items: center; gap: 8px; padding-right: 90px; margin-bottom: 16px; }
+    #pegasus-winter-arsenal .pf-heading h2 { margin: 0; }
+    #pegasus-winter-arsenal .pf-tier { min-width: 0; }
+    #pegasus-winter-arsenal .pf-tier h3 { margin: 0 0 4px; }
+    #pegasus-winter-arsenal .pf-role { color: var(--muted-foreground); margin-bottom: 12px; }
+    #pegasus-winter-arsenal .pf-finish-label { margin-bottom: 6px; }
+    #pegasus-winter-arsenal .pf-finish-sample { display: block; width: 100%; height: 88px; margin-bottom: 12px; }
+    #pegasus-winter-arsenal .pf-finish-controls { margin-bottom: 16px; }
+    #pegasus-winter-arsenal .pf-finish-rule { margin-top: 12px; color: var(--muted-foreground); }
+    #pegasus-winter-arsenal .pf-weapons { display: grid; gap: 8px; }
+    #pegasus-winter-arsenal .pf-selected { margin-top: 20px; }
+    #pegasus-winter-arsenal .pf-title { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 12px; margin-bottom: 16px; }
+    #pegasus-winter-arsenal .pf-title h3 { margin: 0; }
+    #pegasus-winter-arsenal .pf-dl { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 16px 24px; margin: 0; }
+    #pegasus-winter-arsenal .pf-dl > div { min-width: 0; }
+    #pegasus-winter-arsenal .pf-dl dt { color: var(--muted-foreground); margin-bottom: 4px; }
+    #pegasus-winter-arsenal .pf-dl dd { margin: 0; overflow-wrap: anywhere; }
+    #pegasus-winter-arsenal .pf-effect { margin-top: 16px; display: flex; align-items: flex-start; gap: 8px; }
+    #pegasus-winter-arsenal .pf-effect i { flex-shrink: 0; }
+    #pegasus-winter-arsenal .pf-foot { margin-top: 12px; color: var(--muted-foreground); }
+    @media (max-width: 540px) {
+      #pegasus-winter-arsenal .pf-dl { grid-template-columns: minmax(0, 1fr); gap: 14px; }
+    }
+  </style>
+
+  <div class="pf-heading">
+    <i data-lucide="snowflake" aria-hidden="true"></i>
+    <h2>Зимний арсенал Pegasus Frost</h2>
+  </div>
+
+  <div class="pf-finish-controls">
+    <div class="viz-row">
+      <button type="button" class="btn" id="pf-play-finish">Показать перелив</button>
+      <span class="text-small text-muted" id="pf-finish-status" aria-live="polite">Образцы материалов · концепт</span>
+    </div>
+  </div>
+
+  <div class="viz-grid" aria-label="Девять концептов по уровням VIP">
+    <section class="pf-tier" aria-labelledby="pf-tier-one">
+      <h3 id="pf-tier-one">VIP I · Иней</h3>
+      <div class="pf-role text-small">Движение · боезапас · броня</div>
+      <div class="pf-finish-label text-small" data-tooltip="Лёгкий перламутровый отблеск при повороте оружия и смене освещения. Основной рисунок сохраняется.">Перламутровый лёд</div>
+      <canvas class="pf-finish-sample" data-finish="1" role="img" aria-label="Концепт материала VIP I: сдержанный перламутровый блеск при повороте оружия."></canvas>
+      <div class="pf-weapons">
+        <button type="button" class="btn viz-tile" data-weapon="mp9" aria-pressed="false">MP9 «Снегирь»</button>
+        <button type="button" class="btn viz-tile" data-weapon="famas" aria-pressed="false">FAMAS «Снежный дозор»</button>
+        <button type="button" class="btn viz-tile" data-weapon="nova" aria-pressed="false">Nova «Хрусталь»</button>
+      </div>
+    </section>
+    <section class="pf-tier" aria-labelledby="pf-tier-two">
+      <h3 id="pf-tier-two">VIP II · Метель</h3>
+      <div class="pf-role text-small">Дуэли · обход · выслеживание</div>
+      <div class="pf-finish-label text-small" data-tooltip="Перламутровая основа и плавный голубой перелив внутри ледяных прожилок и зимнего орнамента.">Поток ледяного света</div>
+      <canvas class="pf-finish-sample" data-finish="2" role="img" aria-label="Концепт материала VIP II: плавный голубой перелив вдоль ледяных прожилок."></canvas>
+      <div class="pf-weapons">
+        <button type="button" class="btn viz-tile" data-weapon="ak47" aria-pressed="true">AK-47 «Frostbite»</button>
+        <button type="button" class="btn viz-tile" data-weapon="m4a1s" aria-pressed="false">M4A1-S «Blizzard»</button>
+        <button type="button" class="btn viz-tile" data-weapon="ssg08" aria-pressed="false">SSG 08 «Полярный след»</button>
+      </div>
+    </section>
+    <section class="pf-tier" aria-labelledby="pf-tier-three">
+      <h3 id="pf-tier-three">VIP III · Аврора</h3>
+      <div class="pf-role text-small">Ледяная зона · дистанция · риск</div>
+      <div class="pf-finish-label text-small" data-tooltip="Ленты голубого, бирюзового и фиолетового сияния проходят по узорам, чешуе и гравировке. Основные цвета оружия сохраняются.">Северное сияние</div>
+      <canvas class="pf-finish-sample" data-finish="3" role="img" aria-label="Концепт материала VIP III: голубое, бирюзовое и фиолетовое северное сияние по зимним узорам."></canvas>
+      <div class="pf-weapons">
+        <button type="button" class="btn viz-tile" data-weapon="awp" aria-pressed="false">AWP «Ice Dragon»</button>
+        <button type="button" class="btn viz-tile" data-weapon="xm1014" aria-pressed="false">XM1014 «Вьюжный клык»</button>
+        <button type="button" class="btn viz-tile" data-weapon="negev" aria-pressed="false">Negev «Вечная мерзлота»</button>
+      </div>
+    </section>
+  </div>
+  <div class="pf-finish-rule text-small">Перелив — по VIP владельца, включая оружие младших коллекций · основной рисунок и форма сохраняются</div>
+
+  <div class="pf-selected" aria-live="polite" aria-atomic="true">
+    <article class="card" aria-labelledby="pf-selected-title">
+      <div class="pf-title">
+        <h3 id="pf-selected-title">AK-47 «Frostbite»</h3>
+        <span class="viz-badge" id="pf-selected-tier">VIP II · Метель</span>
+      </div>
+      <dl class="pf-dl">
+        <div>
+          <dt>Текстура и материалы</dt>
+          <dd id="pf-material">Графитовый металл, синие ледяные прожилки, белый иней по краям. Тёмная рукоять сохраняет контраст; крыло Пегаса нанесено серебром.</dd>
+        </div>
+        <div>
+          <dt>Способность</dt>
+          <dd id="pf-ability">«Обморожение» — короткая точная серия мешает противнику уйти за укрытие.</dd>
+        </div>
+        <div>
+          <dt>Условие срабатывания</dt>
+          <dd id="pf-trigger">Три попадания по одному живому противнику за 1,2 секунды.</dd>
+        </div>
+        <div>
+          <dt>Предлагаемый эффект</dt>
+          <dd class="tabular-nums" id="pf-result">−10% скорости цели на 0,8 секунды. Дополнительного урона нет.</dd>
+        </div>
+        <div>
+          <dt>Откат</dt>
+          <dd class="tabular-nums" id="pf-cooldown">10 секунд между срабатываниями.</dd>
+        </div>
+        <div>
+          <dt>Ответ противника</dt>
+          <dd id="pf-counter">Разорвать серию укрытием или сменой позиции; после замедления действует общая защита от повторного холода.</dd>
+        </div>
+      </dl>
+      <div class="pf-effect text-small">
+        <i data-lucide="sparkles" aria-hidden="true"></i>
+        <span id="pf-visual">При срабатывании — короткий блеск инея на ногах цели и вспышка прожилок на корпусе AK.</span>
+      </div>
+    </article>
+  </div>
+  <div class="pf-foot text-small">9 концептов · исходные силуэты CS2 · параметры для будущих игровых тестов</div>
+
+  <script>
+    (() => {
+      const root = document.getElementById('pegasus-winter-arsenal');
+      const weapons = {
+        mp9: {
+          name: 'MP9 «Снегирь»', tier: 'VIP I · Иней',
+          material: 'Снежно-белый корпус, алые вставки под цвет снегиря и тёмный металл. На прикладе — тонкие еловые ветви и ягоды; рукоять остаётся графитовой.',
+          ability: '«Зимний порыв» — награда за агрессивную игру и быструю смену позиции.',
+          trigger: 'Убийство из MP9.',
+          result: '+6% к скорости передвижения на 2 секунды, пока MP9 в руках.',
+          cooldown: '10 секунд между срабатываниями. Повторное убийство не продлевает эффект.',
+          counter: 'Всплеск скорости короткий; стрельба на бегу сохраняет обычную неточность MP9.',
+          visual: 'За ногами владельца на мгновение возникает редкая снежная пыль; алые акценты отличают оружие от остальных.'
+        },
+        famas: {
+          name: 'FAMAS «Снежный дозор»', tier: 'VIP I · Иней',
+          material: 'Белый арктический камуфляж, серые перья Пегаса, холодная сталь. На магазине — небольшой голубой зимний знак; прицел и рукоять тёмные.',
+          ability: '«Полярный резерв» — продолжить перестрелку после удачного первого контакта.',
+          trigger: 'Убийство из FAMAS, если магазин неполон и в запасе есть патроны.',
+          result: 'До 4 патронов переходят из запаса в магазин. Его обычная вместимость сохраняется.',
+          cooldown: '8 секунд между срабатываниями.',
+          counter: 'Запас боеприпасов расходуется; полноценная перезарядка по-прежнему нужна.',
+          visual: 'Короткая световая волна в сторону магазина, похожая на пробегающий по металлу иней.'
+        },
+        nova: {
+          name: 'Nova «Хрусталь»', tier: 'VIP I · Иней',
+          material: 'Тёмно-синий корпус и серебряный рисунок треснувшего льда. Цевьё светлее основной части; мелкие снежинки нанесены как гравировка.',
+          ability: '«Кристальный панцирь» — небольшое восстановление защиты за победу на ближней дистанции.',
+          trigger: 'Убийство из Nova с расстояния не более 10 метров.',
+          result: '+10 единиц брони до обычного лимита сервера. Здоровье и шлем не восстанавливаются.',
+          cooldown: '12 секунд между срабатываниями.',
+          counter: 'Бонус выдаётся после убийства; на средней и дальней дистанции не срабатывает.',
+          visual: 'На мгновение по перчаткам владельца проходит хрустальный узор; крупной оболочки вокруг игрока нет.'
+        },
+        ak47: {
+          name: 'AK-47 «Frostbite»', tier: 'VIP II · Метель',
+          material: 'Графитовый металл, синие ледяные прожилки, белый иней по краям. Тёмная рукоять сохраняет контраст; крыло Пегаса нанесено серебром.',
+          ability: '«Обморожение» — короткая точная серия мешает противнику уйти за укрытие.',
+          trigger: 'Три попадания по одному живому противнику за 1,2 секунды.',
+          result: '−10% скорости цели на 0,8 секунды. Дополнительного урона нет.',
+          cooldown: '10 секунд между срабатываниями.',
+          counter: 'Разорвать серию укрытием или сменой позиции; после замедления действует общая защита от повторного холода.',
+          visual: 'При срабатывании — короткий блеск инея на ногах цели и вспышка прожилок на корпусе AK.'
+        },
+        m4a1s: {
+          name: 'M4A1-S «Blizzard»', tier: 'VIP II · Метель',
+          material: 'Жемчужно-белые панели, глубокий синий металл, линии снежного вихря вдоль ствольной коробки и глушителя. Тёмные стыки подчёркивают исходную форму M4.',
+          ability: '«Тихая метель» — короткое окно для смены позиции после убийства.',
+          trigger: 'Убийство из M4A1-S.',
+          result: 'Звук собственных шагов исчезает на 1,5 секунды, пока M4A1-S в руках. Выстрелы и перезарядка слышны как обычно.',
+          cooldown: '12 секунд между срабатываниями.',
+          counter: 'Ориентироваться по последнему выстрелу и визуальному контакту; невидимости способность не даёт.',
+          visual: 'По рисунку метели проходит мягкая волна. Никакого облака, закрывающего обзор, не появляется.'
+        },
+        ssg08: {
+          name: 'SSG 08 «Полярный след»', tier: 'VIP II · Метель',
+          material: 'Серебристо-серый корпус, фиолетово-бирюзовые ленты северного сияния и тонкая карта созвездий. Оптика остаётся тёмной, без яркого свечения.',
+          ability: '«Снежный след» — найти направление отхода раненого противника.',
+          trigger: 'Попадание из SSG 08, после которого противник остаётся жив.',
+          result: '2 секунды цель оставляет снежные отпечатки на земле. Каждый отпечаток живёт 1 секунду и виден только стрелявшему при обычной видимости.',
+          cooldown: '10 секунд между срабатываниями.',
+          counter: 'Следы быстро исчезают. Через стены и дым, над головой цели и на радаре меток нет.',
+          visual: 'Небольшие светлые отпечатки в месте шагов; во время действия по ложе винтовки проходит лента сияния.'
+        },
+        awp: {
+          name: 'AWP «Ice Dragon»', tier: 'VIP III · Аврора',
+          material: 'Обсидиановая основа, серебряная чешуя и крупный голубой ледяной дракон вдоль корпуса. Небольшие опаловые акценты меняют оттенок при осмотре.',
+          ability: '«Ледяное эхо» — ненадолго затруднить движение рядом с местом точного убийства.',
+          trigger: 'Убийство из AWP при готовой способности.',
+          result: 'У места гибели на 2 секунды возникает ледяной круг радиусом 2 метра: −10% скорости противникам внутри. Стены прерывают действие.',
+          cooldown: '18 секунд между срабатываниями.',
+          counter: 'Обойти видимую зону или переждать 2 секунды. Общая защита от повторного холода ограничивает замедление одной цели 1 секундой.',
+          visual: 'По земле расходится тонкое кольцо снежинок; над точкой на миг возникает контур ледяного дракона. Дополнительного взрыва и урона нет.'
+        },
+        xm1014: {
+          name: 'XM1014 «Вьюжный клык»', tier: 'VIP III · Аврора',
+          material: 'Белая керамическая фактура, бордовые акценты, матовая сталь. На цевье — острые ледяные узоры, на корпусе — графический клык без выступающей геометрии.',
+          ability: '«Криоимпульс» — оттеснить противника и создать немного пространства в тесной дуэли.',
+          trigger: 'Первое несмертельное попадание из XM1014 с расстояния до 6 метров по цели, стоящей на земле.',
+          result: 'Плавный толчок от стрелка до 0,7 метра. Препятствия останавливают движение; подбрасывания, оглушения и доворота камеры нет.',
+          cooldown: '15 секунд между срабатываниями.',
+          counter: 'Держать дистанцию или спиной упираться в препятствие; цель сохраняет возможность стрелять.',
+          visual: 'От точки попадания расходится короткая волна ледяной крошки; направление импульса читается по снежной пыли у земли.'
+        },
+        negev: {
+          name: 'Negev «Вечная мерзлота»', tier: 'VIP III · Аврора',
+          material: 'Оружейная сталь и тёмный графит, бирюзовый иней на крышке и коробе, серебристые пласты мерзлоты. Ленты северного сияния объединяют крупные поверхности.',
+          ability: '«Сердце зимы» — обменять безопасную позицию на шанс немного восстановиться.',
+          trigger: 'Убийство противника из Negev при готовой способности.',
+          result: 'Из убитого противника выпадает ледяной кристалл и остаётся на земле 4 секунды. Владелец подбирает его касанием и восстанавливает 20 HP до обычного лимита здоровья.',
+          cooldown: '15 секунд между появлениями кристалла. Одновременно доступен один кристалл на владельца.',
+          counter: 'Любой противник может разрушить кристалл попаданием; владельцу приходится приблизиться к месту убийства.',
+          visual: 'Небольшой хорошо различимый ледяной кристалл вылетает из убитого противника короткой дугой и падает на землю; при подборе распадается на снежинки. Кристалл не даёт укрытия и не блокирует движение.'
+        }
+      };
+      const fields = {
+        name: root.querySelector('#pf-selected-title'),
+        tier: root.querySelector('#pf-selected-tier'),
+        material: root.querySelector('#pf-material'),
+        ability: root.querySelector('#pf-ability'),
+        trigger: root.querySelector('#pf-trigger'),
+        result: root.querySelector('#pf-result'),
+        cooldown: root.querySelector('#pf-cooldown'),
+        counter: root.querySelector('#pf-counter'),
+        visual: root.querySelector('#pf-visual')
+      };
+      const buttons = Array.from(root.querySelectorAll('[data-weapon]'));
+      let selectedId = 'ak47';
+      const valid = id => typeof id === 'string' && Object.hasOwn(weapons, id);
+      const restoreId = state => valid(state?.privateContent?.selectedId)
+        ? state.privateContent.selectedId
+        : valid(state?.modelContent?.weaponId) ? state.modelContent.weaponId : 'ak47';
+      function selectWeapon(id, persist) {
+        if (!valid(id)) return;
+        selectedId = id;
+        const weapon = weapons[id];
+        for (const [key, element] of Object.entries(fields)) element.textContent = weapon[key];
+        buttons.forEach(button => button.setAttribute('aria-pressed', String(button.dataset.weapon === id)));
+        if (persist && window.openai?.setWidgetState) {
+          window.openai.setWidgetState({
+            modelContent: {
+              concept: 'Pegasus Frost · зимнее VIP-вооружение',
+              weaponId: id, weapon: weapon.name, tier: weapon.tier,
+              ability: weapon.ability, effect: weapon.result, cooldown: weapon.cooldown,
+              finishPolicy: 'По уровню VIP владельца, включая оружие младших коллекций',
+              finishes: { vip1: 'Перламутровый лёд при повороте оружия', vip2: 'Плавный голубой перелив ледяных прожилок', vip3: 'Голубое, бирюзовое и фиолетовое северное сияние по узорам' }
+            },
+            privateContent: { selectedId }
+          }).catch(() => {});
+        }
+      }
+      buttons.forEach(button => button.addEventListener('click', () => selectWeapon(button.dataset.weapon, true)));
+      selectWeapon(restoreId(window.openai?.widgetState), false);
+      window.addEventListener('openai:set_globals', event => {
+        if (event.detail?.globals && Object.hasOwn(event.detail.globals, 'widgetState')) {
+          selectWeapon(restoreId(event.detail.globals.widgetState), false);
+        }
+      });
+
+      const samples = Array.from(root.querySelectorAll('[data-finish]'));
+      const playFinish = root.querySelector('#pf-play-finish');
+      const finishStatus = root.querySelector('#pf-finish-status');
+      const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+      let finishPhase = 0.48;
+      let animationId = null;
+      let colors = {};
+      function readColors() {
+        for (const token of ['muted', 'card', 'foreground', 'blue', 'green', 'purple']) {
+          const probe = document.createElement('span');
+          probe.style.color = 'var(--' + token + ')';
+          probe.style.display = 'none';
+          root.appendChild(probe);
+          colors[token] = getComputedStyle(probe).color;
+          probe.remove();
+        }
+      }
+      function drawFinish(canvas, phase) {
+        const width = Math.max(1, canvas.clientWidth);
+        const height = 88;
+        const ratio = Math.min(window.devicePixelRatio || 1, 2);
+        if (canvas.width !== Math.round(width * ratio) || canvas.height !== Math.round(height * ratio)) {
+          canvas.width = Math.round(width * ratio);
+          canvas.height = Math.round(height * ratio);
+        }
+        const context = canvas.getContext('2d');
+        if (!context) return;
+        const level = Number(canvas.dataset.finish);
+        context.setTransform(ratio, 0, 0, ratio, 0, 0);
+        context.clearRect(0, 0, width, height);
+        const base = context.createLinearGradient(0, 0, width, height);
+        base.addColorStop(0, colors.muted);
+        base.addColorStop(0.55, colors.card);
+        base.addColorStop(1, colors.muted);
+        context.fillStyle = base;
+        context.fillRect(0, 0, width, height);
+        context.globalAlpha = level === 1 ? 0.09 : 0.18;
+        context.fillStyle = colors.blue;
+        context.fillRect(0, 0, width, height);
+        context.globalAlpha = 1;
+        const position = (phase * 1.7 - 0.35) * width;
+        const band = context.createLinearGradient(position - width * 0.6, 0, position + width * 0.6, height);
+        band.addColorStop(0, colors.blue);
+        band.addColorStop(0.32, level === 3 ? colors.green : colors.card);
+        band.addColorStop(0.58, level === 3 ? colors.purple : colors.blue);
+        band.addColorStop(0.8, colors.card);
+        band.addColorStop(1, colors.blue);
+        context.globalAlpha = level === 1 ? 0.2 : level === 2 ? 0.35 : 0.56;
+        context.fillStyle = band;
+        context.fillRect(0, 0, width, height);
+        context.globalAlpha = 1;
+        for (let vein = 0; vein < 7; vein++) {
+          const start = width * (vein / 6) - width * 0.12;
+          context.beginPath();
+          context.moveTo(start, height);
+          context.lineTo(start + width * 0.12, height * 0.54);
+          context.lineTo(start + width * 0.05, height * 0.37);
+          context.lineTo(start + width * 0.26, 0);
+          context.strokeStyle = level === 1 ? colors.foreground : band;
+          context.globalAlpha = level === 1 ? 0.1 : level === 2 ? 0.45 : 0.7;
+          context.lineWidth = level === 1 ? 0.8 : level === 2 ? 1.5 : 2;
+          context.stroke();
+        }
+        if (level === 3) {
+          context.globalAlpha = 0.55;
+          context.strokeStyle = band;
+          context.lineWidth = 5;
+          for (let ribbon = 0; ribbon < 2; ribbon++) {
+            context.beginPath();
+            for (let x = 0; x <= width; x += 3) {
+              const y = height * (0.3 + ribbon * 0.35) + Math.sin(x / width * 5 + phase * 5 + ribbon) * height * 0.16;
+              if (x === 0) context.moveTo(x, y); else context.lineTo(x, y);
+            }
+            context.stroke();
+          }
+        }
+        context.globalAlpha = 1;
+      }
+      function drawSamples() { samples.forEach(canvas => drawFinish(canvas, finishPhase)); }
+      readColors();
+      drawSamples();
+      const sampleObserver = new ResizeObserver(drawSamples);
+      samples.forEach(canvas => sampleObserver.observe(canvas));
+      const themeObserver = new MutationObserver(() => { readColors(); drawSamples(); });
+      themeObserver.observe(document.documentElement, { attributes: true, attributeFilter: ['class', 'style', 'data-theme'] });
+      const appearance = window.matchMedia('(prefers-color-scheme: dark)');
+      appearance.addEventListener('change', () => { readColors(); drawSamples(); });
+      playFinish.addEventListener('click', () => {
+        if (animationId !== null) window.cancelAnimationFrame(animationId);
+        if (reducedMotion.matches) {
+          finishPhase = finishPhase < 0.5 ? 0.8 : 0.2;
+          drawSamples();
+          finishStatus.textContent = 'Статичный образец · уменьшение движения';
+          return;
+        }
+        playFinish.disabled = true;
+        finishStatus.textContent = 'Демонстрация перелива';
+        const start = performance.now();
+        function animate(now) {
+          if (!root.isConnected) { sampleObserver.disconnect(); themeObserver.disconnect(); return; }
+          finishPhase = Math.min((now - start) / 3200, 1);
+          drawSamples();
+          if (finishPhase < 1) animationId = window.requestAnimationFrame(animate);
+          else {
+            animationId = null;
+            playFinish.disabled = false;
+            finishStatus.textContent = 'Образцы материалов · концепт';
+          }
+        }
+        animationId = window.requestAnimationFrame(animate);
+      });
+    })();
+  </script>
+</div>
