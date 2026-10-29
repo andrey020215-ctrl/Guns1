@@ -18,6 +18,8 @@ public sealed class WeaponCatalog
             catalog.Weapons.Count(x => x.RequiredVip == 2) != 4 ||
             catalog.Weapons.Count(x => x.RequiredVip == 3) != 4)
             throw new InvalidDataException("Expected 4 weapons per VIP level");
+        if (catalog.Weapons.Any(x => x.PriceSnowflakes <= 0 || x.CooldownSeconds <= 0))
+            throw new InvalidDataException("Invalid price or cooldown");
         return catalog;
     }
 }

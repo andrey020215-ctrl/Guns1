@@ -1,5 +1,5 @@
 {
-  "schema_version": "concept-3-instant-grant",
+  "schema_version": "concept-4-vip-map-shop",
   "status": "development_not_cs2_tested",
   "max_health": 110,
   "max_armor": 125,
@@ -59,7 +59,8 @@
       "cooldown": "10 с",
       "visual": "Снежная пыль",
       "status": "concept_not_game_tested",
-      "price_snowflakes": 150
+      "price_snowflakes": 150,
+      "cooldown_seconds": 10
     },
     {
       "id": "famas",
@@ -75,7 +76,8 @@
       "cooldown": "8 с",
       "visual": "Иней движется к магазину",
       "status": "concept_not_game_tested",
-      "price_snowflakes": 150
+      "price_snowflakes": 150,
+      "cooldown_seconds": 8
     },
     {
       "id": "nova",
@@ -91,7 +93,8 @@
       "cooldown": "12 с",
       "visual": "Кристаллическая вспышка на перчатках",
       "status": "concept_not_game_tested",
-      "price_snowflakes": 150
+      "price_snowflakes": 150,
+      "cooldown_seconds": 12
     },
     {
       "id": "glock18",
@@ -107,7 +110,8 @@
       "cooldown": "12 с",
       "visual": "Короткая голубая вспышка",
       "status": "concept_not_game_tested",
-      "price_snowflakes": 150
+      "price_snowflakes": 150,
+      "cooldown_seconds": 12
     },
     {
       "id": "ak47",
@@ -123,7 +127,8 @@
       "cooldown": "10 с",
       "visual": "Вспышка инея у ног врага",
       "status": "concept_not_game_tested",
-      "price_snowflakes": 300
+      "price_snowflakes": 300,
+      "cooldown_seconds": 10
     },
     {
       "id": "m4a1s",
@@ -139,7 +144,8 @@
       "cooldown": "12 с",
       "visual": "Голубая волна вдоль глушителя",
       "status": "concept_not_game_tested",
-      "price_snowflakes": 300
+      "price_snowflakes": 300,
+      "cooldown_seconds": 12
     },
     {
       "id": "ssg08",
@@ -155,7 +161,8 @@
       "cooldown": "10 с",
       "visual": "Краткое сияние вдоль ложа",
       "status": "concept_not_game_tested",
-      "price_snowflakes": 300
+      "price_snowflakes": 300,
+      "cooldown_seconds": 10
     },
     {
       "id": "usp_s",
@@ -171,7 +178,8 @@
       "cooldown": "15 с",
       "visual": "Бирюзовый свет по глушителю",
       "status": "concept_not_game_tested",
-      "price_snowflakes": 300
+      "price_snowflakes": 300,
+      "cooldown_seconds": 15
     },
     {
       "id": "awp",
@@ -187,7 +195,8 @@
       "cooldown": "18 с",
       "visual": "Ледяное кольцо и полупрозрачный контур дракона",
       "status": "concept_not_game_tested",
-      "price_snowflakes": 600
+      "price_snowflakes": 600,
+      "cooldown_seconds": 18
     },
     {
       "id": "xm1014",
@@ -203,7 +212,8 @@
       "cooldown": "15 с",
       "visual": "Короткая волна ледяной крошки",
       "status": "concept_not_game_tested",
-      "price_snowflakes": 600
+      "price_snowflakes": 600,
+      "cooldown_seconds": 15
     },
     {
       "id": "negev",
@@ -219,7 +229,8 @@
       "cooldown": "15 с",
       "visual": "Падающий кристалл распадается на снежинки",
       "status": "concept_not_game_tested",
-      "price_snowflakes": 600
+      "price_snowflakes": 600,
+      "cooldown_seconds": 15
     },
     {
       "id": "deagle",
@@ -235,8 +246,18 @@
       "cooldown": "18 с",
       "visual": "Волна северного сияния по затвору",
       "status": "concept_not_game_tested",
-      "price_snowflakes": 600
+      "price_snowflakes": 600,
+      "cooldown_seconds": 18
     }
   ],
-  "pricing_note": "Preliminary adjustable prices per weapon, not final economy balance."
+  "pricing_note": "Preliminary adjustable prices per weapon, not final economy balance.",
+  "access_policy": {
+    "free_vip_includes_lower_tiers": true,
+    "nonvip_can_buy_any": true,
+    "paid_higher_tiers_for_lower_vip": true,
+    "unlock_scope": "current_map",
+    "repeat_take_free_after_purchase": true,
+    "finish_policy": "VIP owner tier for VIP; native collection tier for non-VIP purchaser",
+    "purchase_price_policy": "per weapon; configurable snowflakes"
+  }
 }

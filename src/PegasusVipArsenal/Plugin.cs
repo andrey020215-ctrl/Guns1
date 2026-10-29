@@ -15,6 +15,7 @@ public sealed class PegasusVipArsenalPlugin : BasePlugin
 
     private WeaponCatalog? _catalog;
     private VipAccess? _vip;
+    private readonly MapWeaponStore _store = new();
 
     public override void Load(bool hotReload)
     {
@@ -33,5 +34,20 @@ public sealed class PegasusVipArsenalPlugin : BasePlugin
         player.PrintToChat($"❄ PEGASUS | VIP {tier} · каталог: {_catalog.Weapons.Count} · DEV");
         foreach (var item in _catalog.Weapons.Where(w => tier >= w.RequiredVip))
             player.PrintToChat($"❄ PEGASUS | {item.Name} — {item.Ability}");
+    }
+    [ConsoleCommand("css_wintershop", "Preview 12 PEGASUS winter weapons in paid snowflake store (read-only)")]
+    public void ShowWinterShop(CCSPlayerController? player, CommandInfo command)
+    {
+        if (player is null || !player.IsValid || _vip is null || _catalog is null) return;
+        var tier = _vip.GetTier(player.SteamID);
+        player.PrintToChat("❄ PEGASUS | Зимний магазин — предпросмотр; покупка пока недоступна");
+        foreach (var weapon in _catalog.Weapons)
+        {
+            var quote = _store.Quote(player.SteamID, tier, weapon);
+            var label = quote.Kind == AccessKind.FreeVip ? "Бесплатно VIP" :
+                        quote.Kind == AccessKind.PurchasedForMap ? "Куплено на эту карту" :
+                        $"Купить за {quote.Price} снежинок";
+            player.PrintToChat($"❄ PEGASUS | {weapon.Name} — {label}");
+        }
     }
 }

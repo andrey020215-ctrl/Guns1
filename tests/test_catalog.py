@@ -20,4 +20,10 @@ assert rule["when"] == "immediately_in_current_life"
 assert rule["respawn_required"] is False and rule["equip"] is True
 assert rule["refund_on_failure"] is True and rule["charge_only_after_success"] is True
 assert rule["allow_pickup"] is False
+assert all(wp["price_snowflakes"] == {1:150,2:300,3:600}[wp["required_vip"]] for wp in w)
+assert all(wp["cooldown_seconds"] > 0 for wp in w)
+assert d["access_policy"]["unlock_scope"] == "current_map"
+assert d["access_policy"]["nonvip_can_buy_any"]
+for tier in range(4):
+    assert len([wp for wp in w if wp["required_vip"] <= tier]) == 4*tier
 print("PASS: 12 weapons, 3 pistols, VIP finishes, instant-grant contract, HP/armor limits")
