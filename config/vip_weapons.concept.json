@@ -1,0 +1,228 @@
+{
+  "schema_version": "concept-3",
+  "status": "prototype_not_game_tested",
+  "currency": "snowflakes",
+  "access_policy": {
+    "free_vip_includes_lower_tiers": true,
+    "nonvip_can_buy_any": true,
+    "paid_higher_tiers_for_lower_vip": true,
+    "unlock_scope": "current_map",
+    "repeat_take_free_after_purchase": true,
+    "finish_policy": "VIP owner tier when VIP; weapon native tier when regular purchaser",
+    "grant_on_take_button": true
+  },
+  "vip_finishes": {
+    "VIP_I": {
+      "label": "Иней",
+      "colors": [
+        "#f6fdff",
+        "#79cfff"
+      ],
+      "behavior": "Медленный бело-голубой перламутровый поток по рисунку",
+      "cycle_seconds": 5
+    },
+    "VIP_II": {
+      "label": "Метель",
+      "colors": [
+        "#64caff",
+        "#20decf"
+      ],
+      "behavior": "Движущиеся голубые и бирюзовые ледяные прожилки",
+      "cycle_seconds": 3.5
+    },
+    "VIP_III": {
+      "label": "Аврора",
+      "colors": [
+        "#3fa9ff",
+        "#14d6c7",
+        "#8c54e9"
+      ],
+      "behavior": "Многослойное северное сияние в узорах",
+      "cycle_seconds": 4
+    }
+  },
+  "max_health": 110,
+  "max_armor": 125,
+  "weapons": [
+    {
+      "id": "mp9",
+      "name": "MP9 «Снегирь»",
+      "required_vip": 1,
+      "tier": "VIP I · Иней",
+      "base_weapon": "weapon_mp9",
+      "slot": "primary",
+      "material": "Графит, белый иней, красный снегирь и ягоды",
+      "ability": "Зимний порыв",
+      "trigger": "Убийство из MP9",
+      "result": "+6% скорости на 2 с, пока MP9 в руках",
+      "cooldown_seconds": 10,
+      "price_snowflakes": 150,
+      "status": "concept_not_game_tested"
+    },
+    {
+      "id": "famas",
+      "name": "FAMAS «Снежный дозор»",
+      "required_vip": 1,
+      "tier": "VIP I · Иней",
+      "base_weapon": "weapon_famas",
+      "slot": "primary",
+      "material": "Арктический камуфляж, зимний лес, ледяные горы",
+      "ability": "Полярный резерв",
+      "trigger": "Убийство при неполном магазине и наличии запасных патронов",
+      "result": "Перенос до 4 патронов из запаса в магазин, без увеличения ёмкости",
+      "cooldown_seconds": 8,
+      "price_snowflakes": 150,
+      "status": "concept_not_game_tested"
+    },
+    {
+      "id": "nova",
+      "name": "Nova «Хрусталь»",
+      "required_vip": 1,
+      "tier": "VIP I · Иней",
+      "base_weapon": "weapon_nova",
+      "slot": "primary",
+      "material": "Сапфировые кристаллы, серебряные снежинки",
+      "ability": "Кристальный панцирь",
+      "trigger": "Убийство на расстоянии не более 10 м",
+      "result": "+10 брони до 125",
+      "cooldown_seconds": 12,
+      "price_snowflakes": 150,
+      "status": "concept_not_game_tested"
+    },
+    {
+      "id": "glock18",
+      "name": "Glock-18 «Морозный импульс»",
+      "required_vip": 1,
+      "tier": "VIP I · Иней",
+      "base_weapon": "weapon_glock",
+      "slot": "secondary",
+      "material": "Бело-серебряный затвор, голубые линии и снежинки",
+      "ability": "Морозная серия",
+      "trigger": "Три подряд попадания по одной цели без промаха",
+      "result": "Замедление цели на 8% на 0,6 с, без дополнительного урона",
+      "cooldown_seconds": 12,
+      "price_snowflakes": 150,
+      "status": "concept_not_game_tested"
+    },
+    {
+      "id": "ak47",
+      "name": "AK-47 «Frostbite»",
+      "required_vip": 2,
+      "tier": "VIP II · Метель",
+      "base_weapon": "weapon_ak47",
+      "slot": "primary",
+      "material": "Чёрный металл, расколотые ледяные пластины, серебряный Пегас",
+      "ability": "Обморожение",
+      "trigger": "Три попадания по одной цели за 1,2 с",
+      "result": "Замедление цели на 10% на 0,8 с",
+      "cooldown_seconds": 10,
+      "price_snowflakes": 300,
+      "status": "concept_not_game_tested"
+    },
+    {
+      "id": "m4a1s",
+      "name": "M4A1-S «Blizzard»",
+      "required_vip": 2,
+      "tier": "VIP II · Метель",
+      "base_weapon": "weapon_m4a1_silencer",
+      "slot": "primary",
+      "material": "Белая керамика, тёмно-синие вихри метели",
+      "ability": "Тихая метель",
+      "trigger": "Убийство из M4A1-S",
+      "result": "Бесшумные собственные шаги на 1,5 с при удержании оружия",
+      "cooldown_seconds": 12,
+      "price_snowflakes": 300,
+      "status": "concept_not_game_tested"
+    },
+    {
+      "id": "ssg08",
+      "name": "SSG 08 «Полярный след»",
+      "required_vip": 2,
+      "tier": "VIP II · Метель",
+      "base_weapon": "weapon_ssg08",
+      "slot": "primary",
+      "material": "Полярные горы, карта звёзд, бирюзовые линии",
+      "ability": "Снежный след",
+      "trigger": "Несмертельное попадание",
+      "result": "2 с снежных отпечатков, каждый живёт 1 с; видны только стрелку без обзора через стены",
+      "cooldown_seconds": 10,
+      "price_snowflakes": 300,
+      "status": "concept_not_game_tested"
+    },
+    {
+      "id": "usp_s",
+      "name": "USP-S «Призрачный иней»",
+      "required_vip": 2,
+      "tier": "VIP II · Метель",
+      "base_weapon": "weapon_usp_silencer",
+      "slot": "secondary",
+      "material": "Чёрный матовый корпус, серебряные руны, светящиеся трещины глушителя",
+      "ability": "Призрачный шаг",
+      "trigger": "Убийство из USP-S",
+      "result": "Бесшумные собственные шаги на 2 с при удержании USP-S",
+      "cooldown_seconds": 15,
+      "price_snowflakes": 300,
+      "status": "concept_not_game_tested"
+    },
+    {
+      "id": "awp",
+      "name": "AWP «Ice Dragon»",
+      "required_vip": 3,
+      "tier": "VIP III · Аврора",
+      "base_weapon": "weapon_awp",
+      "slot": "primary",
+      "material": "Обсидиан, ледяной дракон, серебряная чешуя и голубое сияние",
+      "ability": "Ледяное эхо",
+      "trigger": "Убийство из AWP",
+      "result": "Зона радиусом 2 м на 2 с в точке смерти; замедление врагов на 10%, стены блокируют",
+      "cooldown_seconds": 18,
+      "price_snowflakes": 600,
+      "status": "concept_not_game_tested"
+    },
+    {
+      "id": "xm1014",
+      "name": "XM1014 «Вьюжный клык»",
+      "required_vip": 3,
+      "tier": "VIP III · Аврора",
+      "base_weapon": "weapon_xm1014",
+      "slot": "primary",
+      "material": "Белая керамика, ледяные клыки и бордовые акценты",
+      "ability": "Криоимпульс",
+      "trigger": "Первое несмертельное попадание до 6 м по наземной цели",
+      "result": "Плавный толчок назад до 0,7 м; препятствия блокируют",
+      "cooldown_seconds": 15,
+      "price_snowflakes": 600,
+      "status": "concept_not_game_tested"
+    },
+    {
+      "id": "negev",
+      "name": "Negev «Вечная мерзлота»",
+      "required_vip": 3,
+      "tier": "VIP III · Аврора",
+      "base_weapon": "weapon_negev",
+      "slot": "primary",
+      "material": "Тёмный металл, кристаллы, ледниковые пластины",
+      "ability": "Сердце зимы",
+      "trigger": "Убийство из Negev",
+      "result": "Кристалл на 4 с; при подборе владельцем +20 HP до 110; один кристалл на владельца",
+      "cooldown_seconds": 15,
+      "price_snowflakes": 600,
+      "status": "concept_not_game_tested"
+    },
+    {
+      "id": "deagle",
+      "name": "Desert Eagle «Полярная буря»",
+      "required_vip": 3,
+      "tier": "VIP III · Аврора",
+      "base_weapon": "weapon_deagle",
+      "slot": "secondary",
+      "material": "Тёмный титан, ледяные трещины, серебряный Пегас, северное сияние",
+      "ability": "Полярный удар",
+      "trigger": "Несмертельное попадание в голову",
+      "result": "Замедление цели на 12% на 0,7 с, без дополнительного урона",
+      "cooldown_seconds": 18,
+      "price_snowflakes": 600,
+      "status": "concept_not_game_tested"
+    }
+  ]
+}
