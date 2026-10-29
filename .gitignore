@@ -1,11 +1,13 @@
 bin/
 obj/
 .vs/
-.vscode/
+.idea/
 *.user
-**/config/roles/vip*.txt
 *.dll
 *.pdb
+*.cache
+config/roles/vip*.txt
+**/steamids.txt
 *.vpk
 *.vmdl_c
 *.vmat_c

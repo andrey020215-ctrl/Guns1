@@ -1,26 +1,27 @@
 namespace PegasusVipArsenal;
 
-// Local development adapter: file list of SteamID64, one per line.
-// Must be integrated with the existing PEGASUS roles service by Codex.
+// Local SteamID64 lists, one per line. Never commit real accounts.
 public sealed class VipAccess
 {
-    private readonly Dictionary<ulong, int> _tiers = new();
+    private readonly Dictionary<ulong, int> _levels = new();
 
-    public static VipAccess Load(string roleDirectory)
+    public static VipAccess Load(string directory)
     {
-        var permissions = new VipAccess();
-        for (int tier = 1; tier <= 3; tier++)
+        var result = new VipAccess();
+        for (var level = 1; level <= 3; level++)
         {
-            var file = Path.Combine(roleDirectory, $"vip{tier}.txt");
+            var file = Path.Combine(directory, $"vip{level}.txt");
             if (!File.Exists(file)) continue;
-            foreach (string line in File.ReadAllLines(file))
+            foreach (var raw in File.ReadAllLines(file))
             {
-                string input = line.Split('#', 2)[0].Trim();
-                if (ulong.TryParse(input, out var steamId) && steamId != 0)
-                    permissions._tiers[steamId] = Math.Max(tier, permissions.GetTier(steamId));
+                var value = raw.Split('#')[0].Trim();
+                if (ulong.TryParse(value, out var steamId) && steamId > 0)
+                    result._levels[steamId] = Math.Max(level, result.GetTier(steamId));
             }
         }
-        return permissions;
+        return result;
     }
-    public int GetTier(ulong steamId) => _tiers.GetValueOrDefault(steamId);
+
+    public int GetTier(ulong steamId) => _levels.GetValueOrDefault(steamId, 0);
+    public bool CanUse(ulong steamId, WeaponDefinition weapon) => GetTier(steamId) >= weapon.RequiredVip;
 }

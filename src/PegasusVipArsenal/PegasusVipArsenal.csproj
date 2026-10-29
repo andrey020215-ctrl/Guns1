@@ -10,8 +10,6 @@
     <Error Text="Set -p:CounterStrikeSharpApiPath=/path/to/CounterStrikeSharp.API.dll matching your installed server" />
   </Target>
   <ItemGroup Condition="'$(CounterStrikeSharpApiPath)' != ''">
-    <Reference Include="CounterStrikeSharp.API">
-      <HintPath>$(CounterStrikeSharpApiPath)</HintPath><Private>false</Private>
-    </Reference>
+    <Reference Include="CounterStrikeSharp.API"><HintPath>$(CounterStrikeSharpApiPath)</HintPath><Private>false</Private></Reference>
   </ItemGroup>
 </Project>
