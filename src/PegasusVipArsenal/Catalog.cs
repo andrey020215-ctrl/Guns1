@@ -31,4 +31,5 @@ public sealed class WeaponDefinition
     [JsonPropertyName("slot")] public string Slot { get; set; } = "";
     [JsonPropertyName("ability")] public string Ability { get; set; } = "";
     [JsonPropertyName("required_vip")] public int RequiredVip { get; set; }
+    [JsonPropertyName("price_snowflakes")] public int PriceSnowflakes { get; set; }
 }

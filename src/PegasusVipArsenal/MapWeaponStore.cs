@@ -15,6 +15,9 @@ public enum PurchaseStatus { AlreadyFree, AlreadyPurchased, Purchased, Insuffici
 public readonly record struct ShopQuote(AccessKind Kind, int Price, int FinishTier);
 public readonly record struct PurchaseReceipt(PurchaseStatus Status, int Spent);
 /// <summary>
+/// IMPORTANT: Buy is a domain-only purchase/unlock; it DOES NOT grant/equip.
+/// Never call Buy directly from a game menu until integrated with an atomic
+/// immediate-grant transaction that rolls back both payment and unlock on failure.
 /// A deterministic, thread-safe map-scoped purchase policy.
 /// NOT yet wired to CounterStrikeSharp menu, map event or weapon grant.
 /// The map event is responsible for invoking StartNewMap ONCE per map load.

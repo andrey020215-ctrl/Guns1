@@ -58,7 +58,8 @@
       "result": "+6% к скорости на 2 с, пока MP9 в руках",
       "cooldown": "10 с",
       "visual": "Снежная пыль",
-      "status": "concept_not_game_tested"
+      "status": "concept_not_game_tested",
+      "price_snowflakes": 150
     },
     {
       "id": "famas",
@@ -73,7 +74,8 @@
       "result": "Перенос до 4 патронов из резерва в магазин (без увеличения ёмкости)",
       "cooldown": "8 с",
       "visual": "Иней движется к магазину",
-      "status": "concept_not_game_tested"
+      "status": "concept_not_game_tested",
+      "price_snowflakes": 150
     },
     {
       "id": "nova",
@@ -88,7 +90,8 @@
       "result": "+10 брони, но не выше серверного лимита 125",
       "cooldown": "12 с",
       "visual": "Кристаллическая вспышка на перчатках",
-      "status": "concept_not_game_tested"
+      "status": "concept_not_game_tested",
+      "price_snowflakes": 150
     },
     {
       "id": "glock18",
@@ -103,7 +106,8 @@
       "result": "−8% скорости цели на 0,6 с, без дополнительного урона",
       "cooldown": "12 с",
       "visual": "Короткая голубая вспышка",
-      "status": "concept_not_game_tested"
+      "status": "concept_not_game_tested",
+      "price_snowflakes": 150
     },
     {
       "id": "ak47",
@@ -118,7 +122,8 @@
       "result": "−10% скорости цели на 0,8 с, без дополнительного урона",
       "cooldown": "10 с",
       "visual": "Вспышка инея у ног врага",
-      "status": "concept_not_game_tested"
+      "status": "concept_not_game_tested",
+      "price_snowflakes": 300
     },
     {
       "id": "m4a1s",
@@ -133,7 +138,8 @@
       "result": "Собственные шаги не слышны 1,5 с при удержании M4A1-S; выстрелы слышны",
       "cooldown": "12 с",
       "visual": "Голубая волна вдоль глушителя",
-      "status": "concept_not_game_tested"
+      "status": "concept_not_game_tested",
+      "price_snowflakes": 300
     },
     {
       "id": "ssg08",
@@ -148,7 +154,8 @@
       "result": "Цель оставляет снежные следы 2 с, видимые только стрелку; без ESP через стены",
       "cooldown": "10 с",
       "visual": "Краткое сияние вдоль ложа",
-      "status": "concept_not_game_tested"
+      "status": "concept_not_game_tested",
+      "price_snowflakes": 300
     },
     {
       "id": "usp_s",
@@ -163,7 +170,8 @@
       "result": "Собственные шаги не слышны 2 с при удержании USP-S; выстрелы слышны",
       "cooldown": "15 с",
       "visual": "Бирюзовый свет по глушителю",
-      "status": "concept_not_game_tested"
+      "status": "concept_not_game_tested",
+      "price_snowflakes": 300
     },
     {
       "id": "awp",
@@ -178,7 +186,8 @@
       "result": "На 2 с зона радиусом 2 м у цели: −10% скорости врагам внутри, с проверкой видимости",
       "cooldown": "18 с",
       "visual": "Ледяное кольцо и полупрозрачный контур дракона",
-      "status": "concept_not_game_tested"
+      "status": "concept_not_game_tested",
+      "price_snowflakes": 600
     },
     {
       "id": "xm1014",
@@ -193,7 +202,8 @@
       "result": "Мягкое отталкивание от стрелка до 0,7 м без оглушения",
       "cooldown": "15 с",
       "visual": "Короткая волна ледяной крошки",
-      "status": "concept_not_game_tested"
+      "status": "concept_not_game_tested",
+      "price_snowflakes": 600
     },
     {
       "id": "negev",
@@ -208,7 +218,8 @@
       "result": "Кристалл на 4 с; подбор владельцем восстанавливает +20 HP, максимум 110",
       "cooldown": "15 с",
       "visual": "Падающий кристалл распадается на снежинки",
-      "status": "concept_not_game_tested"
+      "status": "concept_not_game_tested",
+      "price_snowflakes": 600
     },
     {
       "id": "deagle",
@@ -223,7 +234,9 @@
       "result": "−12% скорости цели на 0,7 с, без дополнительного урона",
       "cooldown": "18 с",
       "visual": "Волна северного сияния по затвору",
-      "status": "concept_not_game_tested"
+      "status": "concept_not_game_tested",
+      "price_snowflakes": 600
     }
-  ]
+  ],
+  "pricing_note": "Preliminary adjustable prices per weapon, not final economy balance."
 }
