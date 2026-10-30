@@ -1,0 +1,33 @@
+{
+  "weapon": "ak47",
+  "source_mesh": "official Valve CS2 Workshop geometry",
+  "muzzle_world_metres": [
+    0.47454190254211426,
+    0.011937085539102554,
+    0.07549367100000381
+  ],
+  "impact_world_metres": [
+    2.0245418548583984,
+    0.011937085539102554,
+    0.07549367100000381
+  ],
+  "style": {
+    "enabled": true,
+    "lifetimeSeconds": 0.12,
+    "coreWidth": 0.2,
+    "glowWidth": 0.8,
+    "coreRgb": [
+      190,
+      250,
+      255
+    ],
+    "glowRgb": [
+      35,
+      205,
+      255
+    ],
+    "maxBeamEntities": 192
+  },
+  "runtime_tested": false,
+  "preview": "Blender Cycles, not a CS2 capture"
+}
