@@ -12,3 +12,8 @@ config/roles/vip*.txt
 *.vmdl_c
 *.vmat_c
 .env
+
+/assets/cs2_local/
+*.blend1
+/assets/prototypes/*.log
+__pycache__/

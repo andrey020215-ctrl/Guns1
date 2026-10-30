@@ -1,0 +1,15 @@
+{
+  "reference_video": "PEGASUS_Frost_Arsenal.mp4",
+  "reference_duration_seconds": 58.5,
+  "source_page": "https://www.counter-strike.net/workshop/workshopresources",
+  "source_archive": "https://media.steampowered.com/apps/csgo/images/workshop/workshop/cs2_weapon_model_geometry.zip",
+  "source_archive_sha256": "f06ed57135a3875658eaee4175c46b203d4c91f83a7f287ef6663dee11b79bbe",
+  "source_geometry_owner": "Valve Corporation",
+  "source_geometry_committed": false,
+  "source_geometry_local_directory": "assets/cs2_local/",
+  "art_created_on": "2026-10-30",
+  "art_method": "AI-generated ornamental albedo atlas, triplanar projection baked to original Valve UVs in Blender",
+  "pixel_exact_copy_of_video": false,
+  "source2_compiled": false,
+  "cs2_tested": false
+}
