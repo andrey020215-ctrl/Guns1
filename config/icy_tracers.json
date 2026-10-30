@@ -1,0 +1,9 @@
+{
+  "enabled": true,
+  "lifetimeSeconds": 0.12,
+  "coreWidth": 0.2,
+  "glowWidth": 0.8,
+  "coreRgb": [190, 250, 255],
+  "glowRgb": [35, 205, 255],
+  "maxBeamEntities": 192
+}

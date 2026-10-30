@@ -1,0 +1,23 @@
+{
+  "status": "build_passed",
+  "cs2_tested": false,
+  "deployed": false,
+  "api_package": "CounterStrikeSharp.API",
+  "api_version": "1.0.378",
+  "minimum_api_version": 378,
+  "api_source_tag": "v1.0.378",
+  "api_source_commit": "d9efaf83b951c74b988ed0a358d03db79c0a4205",
+  "plugin_target_framework": "net10.0",
+  "sdk": "10.0.403",
+  "tracer_checks_passed": 121,
+  "existing_purchase_policy_passed": true,
+  "catalog_checks_passed": true,
+  "explicit_api_dll_path_build_passed": true,
+  "plugin_sha256": "4645d0694793df9c739c4c531d9ec9a8c758fc5db23773644310942899ea7b90",
+  "integration_required": [
+    "verified grant and skin application",
+    "real world-space muzzle resolver",
+    "exclusive tracer ownership with Weapon Frost Effects",
+    "CS2 runtime and 32-player testing"
+  ]
+}

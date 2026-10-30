@@ -1,14 +1,19 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFramework>net8.0</TargetFramework>
+    <TargetFramework>net10.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <LangVersion>latest</LangVersion>
     <AssemblyName>PegasusVipArsenal</AssemblyName>
   </PropertyGroup>
-  <Target Name="RequireCsSharpApi" BeforeTargets="ResolveReferences" Condition="'$(CounterStrikeSharpApiPath)' == ''">
-    <Error Text="Set -p:CounterStrikeSharpApiPath=/path/to/CounterStrikeSharp.API.dll matching your installed server" />
-  </Target>
+  <ItemGroup>
+    <ProjectReference Include="../PegasusVipArsenal.Contracts/PegasusVipArsenal.Contracts.csproj" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="10.0.0" ExcludeAssets="runtime" PrivateAssets="all" />
+    <Content Include="../../config/*.json" Link="config/%(Filename)%(Extension)" CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
+  <ItemGroup Condition="'$(CounterStrikeSharpApiPath)' == ''">
+    <PackageReference Include="CounterStrikeSharp.API" Version="1.0.378" ExcludeAssets="runtime" PrivateAssets="all" />
+  </ItemGroup>
   <ItemGroup Condition="'$(CounterStrikeSharpApiPath)' != ''">
     <Reference Include="CounterStrikeSharp.API"><HintPath>$(CounterStrikeSharpApiPath)</HintPath><Private>false</Private></Reference>
   </ItemGroup>

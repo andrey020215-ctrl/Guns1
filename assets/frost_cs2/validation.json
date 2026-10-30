@@ -1,0 +1,102 @@
+{
+  "blender_version": "4.3.2",
+  "models": [
+    {
+      "id": "mp9",
+      "vertices": 24372,
+      "faces": 31004,
+      "geometry_preserved": true,
+      "original_uv_preserved": true,
+      "glb_embedded_texture": true
+    },
+    {
+      "id": "famas",
+      "vertices": 27118,
+      "faces": 32869,
+      "geometry_preserved": true,
+      "original_uv_preserved": true,
+      "glb_embedded_texture": true
+    },
+    {
+      "id": "nova",
+      "vertices": 19272,
+      "faces": 25908,
+      "geometry_preserved": true,
+      "original_uv_preserved": true,
+      "glb_embedded_texture": true
+    },
+    {
+      "id": "glock18",
+      "vertices": 12733,
+      "faces": 15265,
+      "geometry_preserved": true,
+      "original_uv_preserved": true,
+      "glb_embedded_texture": true
+    },
+    {
+      "id": "ak47",
+      "vertices": 21548,
+      "faces": 26133,
+      "geometry_preserved": true,
+      "original_uv_preserved": true,
+      "glb_embedded_texture": true
+    },
+    {
+      "id": "m4a1s",
+      "vertices": 37007,
+      "faces": 45376,
+      "geometry_preserved": true,
+      "original_uv_preserved": true,
+      "glb_embedded_texture": true
+    },
+    {
+      "id": "ssg08",
+      "vertices": 41977,
+      "faces": 49257,
+      "geometry_preserved": true,
+      "original_uv_preserved": true,
+      "glb_embedded_texture": true
+    },
+    {
+      "id": "usp_s",
+      "vertices": 15878,
+      "faces": 18918,
+      "geometry_preserved": true,
+      "original_uv_preserved": true,
+      "glb_embedded_texture": true
+    },
+    {
+      "id": "awp",
+      "vertices": 33786,
+      "faces": 39769,
+      "geometry_preserved": true,
+      "original_uv_preserved": true,
+      "glb_embedded_texture": true
+    },
+    {
+      "id": "xm1014",
+      "vertices": 25006,
+      "faces": 29982,
+      "geometry_preserved": true,
+      "original_uv_preserved": true,
+      "glb_embedded_texture": true
+    },
+    {
+      "id": "negev",
+      "vertices": 50915,
+      "faces": 57091,
+      "geometry_preserved": true,
+      "original_uv_preserved": true,
+      "glb_embedded_texture": true
+    },
+    {
+      "id": "deagle",
+      "vertices": 15040,
+      "faces": 18269,
+      "geometry_preserved": true,
+      "original_uv_preserved": true,
+      "glb_embedded_texture": true
+    }
+  ],
+  "cs2_tested": false
+}
